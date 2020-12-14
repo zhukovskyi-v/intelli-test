@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+button,
+p,
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+ul > li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+button {
+    background: transparent;
+    border: none;
+}
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border: none;
+}

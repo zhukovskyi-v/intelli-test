@@ -1,0 +1,185 @@
+.header {
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &__logo {
+        width: 4%;
+        margin-right: 33px;
+        text-align: center;
+    }
+
+    &__dropdown {
+        text-align: left;
+        margin-left: 10px;
+        font-weight: 600;
+        line-height: 5px;
+        color: #222222;
+    }
+    &__dropdown-subtitle {
+        font-size: 0.95em;
+        font-weight: 600;
+        color: #535353;
+        margin-top: 10px;
+    }
+    &__account {
+        width: 16.6%;
+        display: flex;
+        margin-right: 72px;
+        justify-content: space-between;
+    }
+    &__account-icon {
+        max-width: 12px;
+        max-height: 8px;
+    }
+    &__nav {
+        width: auto;
+        margin-right: auto;
+    }
+    .nav__item {
+        margin-right: 40px;
+        font-weight: 600;
+        line-height: 60px;
+        color: #222222;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .nav__link {
+        position: relative;
+
+        &:hover {
+            &::after {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: #2a63f5;
+                bottom: -16px;
+            }
+        }
+    }
+    &__info {
+        width: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 39px;
+    }
+    &__user {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 37px;
+        height: 37px;
+        border-radius: 50%;
+        background: #0b61fe;
+    }
+    &__user-name {
+        font-weight: 600;
+        font-size: 1em;
+        text-transform: uppercase;
+        line-height: 21px;
+        color: #ffffff;
+    }
+    &__burder {
+        display: none;
+    }
+}
+@media (max-width: 1170px) {
+    .header {
+        &__nav {
+            margin: auto;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .header {
+        &__account {
+            width: 21%;
+        }
+        &__info {
+            margin-right: 30px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 5px 25px;
+        justify-content: space-between;
+        transition: all 0.6s ease-in-out;
+        &__active {
+            display: block;
+
+            padding: 1em;
+            position: relative;
+            transition: all 0.6s ease-in-out;
+            .header__logo {
+                display: none;
+                transition: all 0.6s ease-in-out;
+            }
+            .header__nav {
+                display: flex;
+                transition: all 0.6s ease-in-out;
+            }
+            .header__info {
+                display: flex;
+                transition: all 0.6s ease-in-out;
+            }
+            .header__burder {
+                position: absolute;
+                top: 15px;
+                right: 24px;
+                transition: all 0.3s ease-in-out;
+                transform: rotate(90deg);
+                &-btn:focus {
+                    outline: none;
+                }
+            }
+        }
+        &__account {
+            width: 40%;
+        }
+        &__nav {
+            display: none;
+        }
+        &__info {
+            display: none;
+            width: 20%;
+            margin-right: 0;
+        }
+        &__burder {
+            display: block;
+        }
+        &__butder-btn {
+            width: 20px;
+            height: 10px;
+        }
+        &__burder-line {
+            display: block;
+            width: 17px;
+            height: 2px;
+            background: #212529;
+            margin-bottom: 0.25em;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 540px) {
+    .header {
+        padding: 5px 15px;
+        &__logo {
+            margin-right: 0;
+        }
+        &__account {
+            width: 50%;
+        }
+        &__info {
+            width: 35%;
+        }
+    }
+}
